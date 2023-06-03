@@ -1,0 +1,11 @@
+{
+  "name": "story-json-everywhere-js-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^29.5.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

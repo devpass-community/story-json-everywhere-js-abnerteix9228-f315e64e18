@@ -1,7 +1,22 @@
 async function getProduct(productId) {
-    const apiUrl = `https://fakestoreapi.com/products/${productId}`;
 
-    // Add your solution here!
+    try {
+        const apiUrl = `https://fakestoreapi.com/products/${productId}`;
+        const response = await fetch(apiUrl);
+
+        if (response.ok) {
+            const product = await response.json();
+            return product;
+
+        } else {
+            console.error(`Erro requisição: ${response.status}`);
+            return null;
+
+        }
+    }catch (error) {
+        console.error(`Erro requisição: `, error);
+        return null;
+    }
 }
 
 module.exports = getProduct;
